@@ -35,6 +35,20 @@
             <version>3.0.1.RELEASE</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-nop -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+
 ### 二、springMvc 配置
 
    > 在web.xml里面配置DispatcherServlet
@@ -93,6 +107,7 @@
                     <property name="prefix" value="/WEB-INF/template/"/>
                     <property name="suffix" value=".html"/>
                     <property name="templateMode" value="HTML5"/>
+                    <property name="characterEncoding" value="UTF-8"/>
                 </bean>
                 <bean id="templateEngine"
                     class="org.thymeleaf.spring4.SpringTemplateEngine">
@@ -100,6 +115,7 @@
                 </bean>
                 <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
                     <property name="templateEngine" ref="templateEngine" />
+                    <property name="characterEncoding" value="UTF-8"/>
                 </bean>
 
             </beans>
