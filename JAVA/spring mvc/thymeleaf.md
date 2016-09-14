@@ -36,6 +36,7 @@
         </dependency>
 
 ### 二、springMvc 配置
+
    > 在web.xml里面配置DispatcherServlet
 
         <servlet>
@@ -53,6 +54,7 @@
 
 
 ### 三、springmvc + thymeleaf 模板引擎配置
+
     > 下面是整个bean文件
 
         <?xml version="1.0" encoding="UTF-8"?>
